@@ -1,0 +1,14 @@
+click>=8.0.0
+requests>=2.25.0
+pytest>=6.0.0
+# Multi-model support
+anthropic>=0.3.0
+# License encryption
+cryptography>=3.4.0
+# Cloud storage
+boto3>=1.18.0
+google-cloud-storage>=2.0.0
+# JWT authentication
+PyJWT>=2.3.0
+# Email notifications
+secure-smtplib>=0.1.1
