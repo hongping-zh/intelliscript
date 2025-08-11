@@ -20,249 +20,247 @@
 
 ---
 
-## 🤖 **支持的AI模型（完整生态系统）**
+## 🤖 **Supported AI Models (Complete Ecosystem)**
 
 <div align="center">
 
-| AI平台 | 模型版本 | 支持状态 | 独特功能 |
-|--------|---------|---------|----------|
-| 🤖 **Anthropic Claude** | **Sonnet 4.0** | ✅ **完整支持** | 企业级安全集成、上下文窗口优化 |
-| 🧠 **Google Gemini** | **2.5 Pro** | ✅ **完整支持** | 云原生部署、多模态处理 |
-| 🔥 **OpenAI GPT** | **4.1 Turbo** | ✅ **完整支持** | 成本智能优化、并发管理 |
-| 💎 **其他模型** | 可扩展 | ✅ **插件支持** | 统一API接口、自定义集成 |
+| AI Platform | Model Version | Support Status | Unique Features |
+|-------------|---------------|----------------|-----------------|
+| 🤖 **Anthropic Claude** | **Sonnet 4.0** | ✅ **Full Support** | Enterprise security integration, context window optimization |
+| 🧠 **Google Gemini** | **2.5 Pro** | ✅ **Full Support** | Cloud-native deployment, multimodal processing |
+| 🔥 **OpenAI GPT** | **4.1 Turbo** | ✅ **Full Support** | Intelligent cost optimization, concurrency management |
+| 💎 **Other Models** | Extensible | ✅ **Plugin Support** | Unified API interface, custom integrations |
 
 </div>
 
-> 🎯 **特色功能**: 智能路由算法自动选择最适合的模型，**平均节省30%成本**
+> 🎯 **Featured Capability**: Intelligent routing algorithm automatically selects the most suitable model, **saving 30% cost on average**
 
 ---
 
-## 🎯 **核心价值主张**
+## 🎯 **Core Value Proposition**
 
 IntelliScript CLI transforms how enterprises manage AI tools by providing:
 
-- **🤖 统一管理平台** - 单一界面管理Claude Sonnet 4、Gemini 2.5 Pro、GPT-4.1等所有主流AI模型
-- **💰 智能成本优化** - 自动路由算法选择最优模型，平均节省30%AI使用成本
-- **🔒 企业级安全** - 银行级AES-256加密，完整审计日志，ISO 27001合规
-- **📊 深度分析洞察** - 全方位使用统计，ROI追踪，优化建议
+- **🤖 Unified Management Platform** - Single interface to manage Claude Sonnet 4, Gemini 2.5 Pro, GPT-4.1, and all mainstream AI models
+- **💰 Intelligent Cost Optimization** - Automatic routing algorithms select optimal models, saving 30% AI usage costs on average
+- **🔒 Enterprise-Grade Security** - Bank-level AES-256 encryption, complete audit logs, ISO 27001 compliance
+- **📊 Deep Analytics Insights** - Comprehensive usage statistics, ROI tracking, optimization recommendations
 
 ---
 
-## ✨ **核心功能亮点**
+## ✨ **Key Feature Highlights**
 
-### 🏗️ **Claude Sonnet 4 企业级集成**
-- **🎯 专业优化**: 针对Claude Sonnet 4的上下文窗口和推理能力特别优化
-- **🔒 安全增强**: 企业级Claude API密钥管理和权限控制
-- **⚡ 性能调优**: Claude Sonnet 4最佳参数配置和并发优化
-- **📈 使用分析**: Claude专用的成本分析和效果评估
+### 🏗️ **Claude Sonnet 4 Enterprise Integration**
+- **🎯 Professional Optimization**: Specially optimized for Claude Sonnet 4's context window and reasoning capabilities
+- **🔒 Security Enhancement**: Enterprise-grade Claude API key management and permission control
+- **⚡ Performance Tuning**: Optimal parameter configuration and concurrency optimization for Claude Sonnet 4
+- **📈 Usage Analytics**: Claude-specific cost analysis and effectiveness evaluation
 
 ```bash
-# Claude Sonnet 4 专用功能示例
-intelliscript ai --model claude-sonnet-4 "分析这份企业财报"
+# Claude Sonnet 4 specialized features
+intelliscript ai --model claude-sonnet-4 "Analyze this corporate financial report"
 intelliscript claude optimize --context-length 200k
 intelliscript claude analyze --usage-report monthly
 ```
 
-### 🧠 **Gemini 2.5 Pro 云原生支持**
-- **☁️ GCP集成**: 深度集成Google Cloud Platform生态系统
-- **🔄 多模态处理**: 支持文本、图像、代码等多模态输入
-- **🌐 全球部署**: 支持Gemini全球多区域部署优化
+### 🧠 **Gemini 2.5 Pro Cloud-Native Support**
+- **☁️ GCP Integration**: Deep integration with Google Cloud Platform ecosystem
+- **🔄 Multimodal Processing**: Support for text, image, code, and other multimodal inputs
+- **🌐 Global Deployment**: Support for Gemini global multi-region deployment optimization
 
-### 🔥 **OpenAI GPT-4.1 成本优化**
-- **💡 智能切换**: 根据任务复杂度自动在GPT-4.1和其他模型间切换
-- **⚡ 并发管理**: 高效的GPT API并发请求管理和限流
-- **📊 成本追踪**: 精确的GPT使用成本分析和预算控制
+### 🔥 **OpenAI GPT-4.1 Cost Optimization**
+- **💡 Intelligent Switching**: Automatically switch between GPT-4.1 and other models based on task complexity
+- **⚡ Concurrency Management**: Efficient GPT API concurrent request management and rate limiting
+- **📊 Cost Tracking**: Precise GPT usage cost analysis and budget control
 
-### 🤝 **多模型协作引擎**
-- **🔄 无缝切换**: 零停机时间在Claude、Gemini、GPT间切换
-- **🎯 任务路由**: AI驱动的任务分配，为每个请求选择最优模型
-- **📈 性能对比**: 实时多模型性能和成本对比分析
+### 🤝 **Multi-Model Collaboration Engine**
+- **🔄 Seamless Switching**: Zero-downtime switching between Claude, Gemini, and GPT
+- **🎯 Task Routing**: AI-driven task allocation, selecting the optimal model for each request
+- **📈 Performance Comparison**: Real-time multi-model performance and cost comparison analysis
 
 ---
 
-## 🚀 **快速开始**
+## 🚀 **Quick Start**
 
-### 前置条件
+### Prerequisites
 - Python 3.8+
-- pip包管理器  
-- AI模型API密钥 (Claude, Gemini, OpenAI)
+- pip package manager  
+- AI model API keys (Claude, Gemini, OpenAI)
 
-### 安装
+### Installation
 
 ```bash
-# 克隆仓库
+# Clone the repository
 git clone https://github.com/hongping-zh/intelliscript.git
 cd intelliscript
 
-# 安装依赖
+# Install dependencies
 pip install -r requirements.txt
 
-# 安装IntelliScript CLI
+# Install IntelliScript CLI
 python setup.py install
 ```
 
-### 快速配置
+### Quick Configuration
 
 ```bash
-# 初始化IntelliScript CLI
+# Initialize IntelliScript CLI
 intelliscript init
 
-# 配置Claude Sonnet 4
+# Configure Claude Sonnet 4
 intelliscript config add-model claude-sonnet-4 --api-key YOUR_CLAUDE_KEY
 
-# 配置Gemini 2.5 Pro
+# Configure Gemini 2.5 Pro
 intelliscript config add-model gemini-pro --api-key YOUR_GEMINI_KEY
 
-# 配置OpenAI GPT-4.1
+# Configure OpenAI GPT-4.1
 intelliscript config add-model gpt-4-turbo --api-key YOUR_OPENAI_KEY
 ```
 
-### 基本使用
+### Basic Usage
 
 ```bash
-# 让AI智能选择最佳模型
-intelliscript ai "解释量子计算的基本原理"
+# Let AI intelligently select the best model
+intelliscript ai "Explain the basic principles of quantum computing"
 
-# 指定使用Claude Sonnet 4
-intelliscript ai --model claude-sonnet-4 "分析这份技术文档"
+# Specify Claude Sonnet 4
+intelliscript ai --model claude-sonnet-4 "Analyze this technical document"
 
-# 批量处理（自动优化成本）
+# Batch processing (automatic cost optimization)
 intelliscript batch process --input tasks.json --optimize-cost
 
-# 查看使用统计
+# View usage statistics
 intelliscript stats show --model claude-sonnet-4
 ```
 
 ---
 
-## 🏗️ **系统架构**
+## 🏗️ **System Architecture**
 
 ```
 ┌─────────────────────────────────────────────────────────┐
 │                IntelliScript CLI Platform               │
 ├─────────────────────────────────────────────────────────┤
-│  CLI界面  │  Web仪表盘  │  REST API  │  Python SDK     │
-├───────────┼─────────────┼────────────┼──────────────────┤
-│              智能模型路由与优化引擎                        │
+│  CLI Interface │  Web Dashboard │  REST API │ Python SDK│
+├────────────────┼────────────────┼───────────┼───────────┤
+│              Intelligent Model Routing & Optimization   │
 ├─────────────────────────────────────────────────────────┤
-│ 许可管理   │ 统计分析    │ 云同步     │ 安全加密          │
-├───────────┼─────────────┼────────────┼──────────────────┤
-│            企业级安全与合规层                             │
+│ License Mgmt   │ Stats Analytics│ Cloud Sync│ Security  │
+├────────────────┼────────────────┼───────────┼───────────┤
+│            Enterprise-Grade Security & Compliance Layer │
 ├─────────────────────────────────────────────────────────┤
-│ Claude     │ Gemini     │ OpenAI    │ 其他AI模型         │
-│ Sonnet 4   │ 2.5 Pro    │ GPT-4.1   │ (可扩展)          │
+│ Claude         │ Gemini        │ OpenAI    │ Other AI  │
+│ Sonnet 4       │ 2.5 Pro       │ GPT-4.1   │ (Extensible)│
 └─────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 📊 **性能基准测试**
+## 📊 **Performance Benchmarks**
 
-| 指标 | IntelliScript CLI | 直接API调用 | 提升幅度 |
-|------|------------------|-------------|----------|
-| **响应时间** | <1.2秒 | 2.8秒 | 🚀 **57%提升** |
-| **成本效率** | 优化后 | 标准费用 | 💰 **30%节省** |
-| **并发处理** | 200+ | 50 | ⚡ **4倍提升** |
-| **错误率** | 0.1% | 2.3% | 🛡️ **95%降低** |
-| **可用性** | 99.7% | 97.2% | 📈 **2.5%提升** |
-
----
-
-## 🧪 **测试与质量保证**
-
-### 测试覆盖率
-- **单元测试**: 45个测试用例，98%通过率
-- **集成测试**: 端到端工作流验证  
-- **安全测试**: 漏洞扫描和合规检查
-- **性能测试**: 200并发用户负载测试
-
-### 质量标准
-- ✅ 代码覆盖率 ≥ 87.3%
-- ✅ 零高危安全漏洞
-- ✅ 所有单元测试通过
-- ✅ 性能基准达标
+| Metric | IntelliScript CLI | Direct API Calls | Improvement |
+|--------|------------------|-------------------|-------------|
+| **Response Time** | <1.2s | 2.8s | 🚀 **57% Faster** |
+| **Cost Efficiency** | Optimized | Standard Rate | 💰 **30% Savings** |
+| **Concurrent Processing** | 200+ | 50 | ⚡ **4x Improvement** |
+| **Error Rate** | 0.1% | 2.3% | 🛡️ **95% Reduction** |
+| **Availability** | 99.7% | 97.2% | 📈 **2.5% Higher** |
 
 ---
 
-## 📚 **文档资源**
+## 🧪 **Testing & Quality Assurance**
 
-| 文档类型 | 链接 | 描述 |
-|----------|------|------|
-| [🏗️ 架构设计](docs/ARCHITECTURE_DESIGN.md) | 系统架构详解 | 技术架构和设计模式 |
-| [📖 开发文档](docs/TECHNICAL_DEVELOPMENT_DOCS.md) | API参考手册 | 开发者指南和API文档 |
-| [🔒 安全指南](docs/SECURITY_KEY_MANAGEMENT.md) | 安全最佳实践 | 安全实现和密钥管理 |
-| [🤖 Claude集成](docs/CLAUDE_INTEGRATION.md) | Claude专用指南 | Claude Sonnet 4最佳实践 |
+### Test Coverage
+- **Unit Tests**: 45 test cases with 98% pass rate
+- **Integration Tests**: End-to-end workflow validation  
+- **Security Tests**: Vulnerability scanning and compliance checks
+- **Performance Tests**: Load testing up to 200 concurrent users
+
+### Quality Gates
+- ✅ Code coverage ≥ 87.3%
+- ✅ Zero critical security vulnerabilities
+- ✅ All unit tests passing
+- ✅ Performance benchmarks met
 
 ---
 
-## 🚀 **部署选项**
+## 📚 **Documentation Resources**
 
-### 本地开发
+| Document Type | Link | Description |
+|---------------|------|-------------|
+| [🏗️ Architecture Design](docs/ARCHITECTURE_DESIGN.md) | System architecture and design patterns | Technical architecture and design patterns |
+| [📖 Developer Guide](docs/TECHNICAL_DEVELOPMENT_DOCS.md) | API reference manual | Developer guide and API documentation |
+| [🔒 Security Guide](docs/SECURITY_KEY_MANAGEMENT.md) | Security best practices | Security implementation and key management |
+| [🤖 Claude Integration](docs/CLAUDE_INTEGRATION.md) | Claude-specific guide | Claude Sonnet 4 best practices |
+
+---
+
+## 🚀 **Deployment Options**
+
+### Local Development
 ```bash
-# 启动开发服务器
+# Start development server
 python intelliscript_cli.py --dev
 ```
 
-### Docker容器化  
+### Docker Containerization  
 ```bash
-# 构建镜像
+# Build image
 docker build -t intelliscript:latest .
 
-# 运行容器
+# Run container
 docker run -p 8080:8080 intelliscript:latest
 ```
 
-### 企业部署
+### Enterprise Deployment
 ```bash
-# 使用docker-compose
+# Use docker-compose
 docker-compose up -d
 
-# 包含Redis、PostgreSQL、监控等完整栈
+# Includes Redis, PostgreSQL, monitoring, and complete stack
 ```
 
 ---
 
+## 🤝 **Contributing**
 
+We welcome community contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
 
-## 🤝 **贡献指南**
-
-我们欢迎社区贡献！请查看 [贡献指南](CONTRIBUTING.md) 了解详情。
-
-### 开发环境设置
+### Development Environment Setup
 ```bash
-# 克隆仓库
+# Clone repository
 git clone https://github.com/hongping-zh/intelliscript.git
 cd intelliscript
 
-# 创建虚拟环境
+# Create virtual environment
 python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# 安装开发依赖
+# Install development dependencies
 pip install -r requirements-dev.txt
 ```
 
 ---
 
-## 📄 **开源协议**
+## 📄 **License**
 
-本项目采用MIT协议 - 查看 [LICENSE](LICENSE) 了解详情。
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🙏 **致谢**
+## 🙏 **Acknowledgments**
 
-- **AI模型提供商**: Anthropic (Claude)、Google (Gemini)、OpenAI (GPT) 的API支持
-- **开源社区**: 贡献者和维护者们
-- **企业用户**: 宝贵的反馈和功能需求
+- **AI Model Providers**: Anthropic (Claude), Google (Gemini), OpenAI (GPT) for API partnerships
+- **Open Source Community**: Contributors and maintainers
+- **Enterprise Users**: Valuable feedback and feature requests
 
 ---
 
 <div align="center">
 
-**⭐ 如果IntelliScript CLI对您有帮助，请给我们一个Star！ ⭐**
+**⭐ If you find IntelliScript CLI helpful, please give us a star! ⭐**
 
-**🤖 统一管理 Claude Sonnet 4 + Gemini 2.5 Pro + GPT-4.1 = 企业AI的未来！**
+**🤖 Unified Management: Claude Sonnet 4 + Gemini 2.5 Pro + GPT-4.1 = The Future of Enterprise AI!**
 
 Made with ❤️ by the IntelliScript Team
 
