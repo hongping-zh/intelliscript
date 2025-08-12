@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>IntelliScript CLI - AI智能脚本执行工具</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="IntelliScript CLI是一个强大的AI智能脚本执行工具，支持多种AI模型，具备危险命令检测和安全确认功能。">
+  <meta name="keywords" content="IntelliScript,CLI,AI,人工智能,脚本执行,安全工具,命令行">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="icon" href="_media/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <style>
+    /* 自定义样式 */
+    .app-name-link {
+      color: #42b883 !important;
+    }
+    .sidebar-nav a {
+      color: #2c3e50;
+    }
+    .sidebar-nav a:hover {
+      color: #42b883;
+    }
+    .markdown-section h1 {
+      color: #2c3e50;
+      border-bottom: 2px solid #42b883;
+      padding-bottom: 10px;
+    }
+    .markdown-section h2 {
+      color: #42b883;
+    }
+    .cover-main {
+      text-align: center;
+    }
+    .cover-main > p:last-child a {
+      background: linear-gradient(to right, #42b883, #35495e);
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+    .cover-main > p:last-child a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(66, 184, 131, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div id="app">Loading...</div>
+  <script>
+    window.$docsify = {
+      name: 'IntelliScript CLI',
+      repo: 'https://github.com/hongping-zh/intelliscript',
+      loadSidebar: true,
+      loadNavbar: true,
+      coverpage: true,
+      onlyCover: false,
+      auto2top: true,
+      maxLevel: 4,
+      subMaxLevel: 3,
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: {
+          '/zh-cn/': '搜索',
+          '/': 'Search'
+        },
+        noData: {
+          '/zh-cn/': '找不到结果',
+          '/': 'No Results'
+        },
+        depth: 4
+      },
+      copyCode: {
+        buttonText: {
+          '/zh-cn/': '点击复制',
+          '/': 'Copy to clipboard'
+        },
+        errorText: {
+          '/zh-cn/': '错误',
+          '/': 'Error'
+        },
+        successText: {
+          '/zh-cn/': '复制成功',
+          '/': 'Copied'
+        }
+      },
+      tabs: {
+        persist: true,
+        sync: true,
+        theme: 'classic',
+        tabComments: true,
+        tabHeadings: true
+      },
+      plugins: [
+        function (hook, vm) {
+          hook.beforeEach(function (html) {
+            if (/githubusercontent\.com/.test(vm.route.file)) {
+              url = vm.route.file
+                .replace('raw.githubusercontent.com', 'github.com')
+                .replace(/\/main/, '/blob/main')
+            } else {
+              url = 'https://github.com/hongping-zh/intelliscript/blob/main/docs/' + vm.route.file
+            }
+            var editHtml = '[:memo: 编辑文档](' + url + ')\n'
+            return editHtml + html
+          })
+        }
+      ]
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- 搜索插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- 代码复制插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
+  <!-- 分页导航 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- 标签页插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+  <!-- 代码高亮 -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+  <!-- Zoom图片插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- 字数统计 -->
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+</body>
+</html>

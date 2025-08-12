@@ -1,0 +1,178 @@
+# IntelliScript Configuration File
+# Copy this file to ~/.config/intelliscript/config.toml and customize
+# 
+# Priority order: config file > environment variables > defaults
+
+# =============================================================================
+# AI Model Providers Configuration
+# =============================================================================
+
+[openai]
+# OpenAI GPT models configuration
+# Get your API key from: https://platform.openai.com/api-keys
+api_key = ""                                    # Your OpenAI API key (starts with sk-)
+model = "gpt-4-turbo"                          # Available: gpt-4-turbo, gpt-4, gpt-3.5-turbo
+temperature = 0.2                              # Creativity level (0.0-2.0, lower = more focused)
+
+[anthropic] 
+# Anthropic Claude models configuration  
+# Get your API key from: https://console.anthropic.com
+api_key = ""                                    # Your Claude API key (starts with sk-ant-)
+model = "claude-3-5-sonnet-20241022"          # Available: claude-3-5-sonnet-20241022, claude-3-haiku-20240307
+temperature = 0.2                              # Creativity level (0.0-1.0)
+max_tokens = 1024                              # Maximum response tokens
+
+[google]
+# Google Gemini models configuration
+# Get your API key from: https://console.cloud.google.com  
+# Enable Generative AI API: https://console.cloud.google.com/apis/library/generativelanguage.googleapis.com
+api_key = ""                                    # Your Google API key
+model = "gemini-pro"                           # Available: gemini-pro, gemini-pro-vision
+temperature = 0.2                              # Creativity level (0.0-1.0)
+
+# =============================================================================
+# Default Provider Selection
+# =============================================================================
+
+# Which provider to use by default (can override with --provider flag)
+[ollama]
+enabled = true                              # Enable/disable Ollama provider
+model = "llama3"                            # Default model (llama3, codellama, mistral, etc.)
+url = "http://localhost:11434"              # Ollama server URL
+# Common models: llama3, llama3:8b, codellama, codellama:13b, mistral, qwen, etc.
+
+default_provider = "ollama"                 # Options: "openai", "anthropic", "google", "ollama"
+
+# Global temperature override (applies to all providers if their specific setting is not set)
+temperature = 0.2
+
+# =============================================================================
+# Custom Prompt Configuration  
+# =============================================================================
+
+[prompt]
+# Customize the system message sent to AI models
+# Available variables: {os} for operating system name
+system_message = """You are a shell command expert for {os}. 
+Generate precise, safe commands based on user queries.
+
+RESPONSE FORMAT:
+Command: <the exact command>
+Explanation: <brief one-sentence explanation>
+
+SAFETY RULES:
+- Never generate destructive commands (rm -rf, mkfs, dd, etc.)
+- Prefer safe, read-only operations when possible  
+- Always include safety flags where appropriate
+- Explain what the command does clearly"""
+
+# =============================================================================
+# Security & Safety Configuration
+# =============================================================================
+
+[security]
+enabled = true                                 # Enable dangerous command detection
+strict_mode = false                           # If true, blocks more commands (conservative)
+
+# Custom dangerous patterns (regex patterns to block)
+custom_patterns = [
+    # Examples of patterns you might want to block
+    # "sudo rm.*",                             # Block sudo rm commands
+    # "dd if=.*",                              # Block dd commands
+    # "mkfs.*"                                 # Block filesystem creation
+]
+
+# =============================================================================
+# Conversation History & Context
+# =============================================================================
+
+[history]
+enabled = true                                 # Enable conversation history
+max_entries = 10                              # Maximum history entries to remember
+auto_context = false                          # Automatically include context (use --context to override)
+
+# =============================================================================
+# User Interface Configuration
+# =============================================================================
+
+[ui]
+# Colors and formatting (if supported by terminal)
+use_colors = true                             # Enable colored output
+show_tokens = true                            # Show token usage statistics
+show_timing = true                           # Show response time
+confirmations = true                         # Ask for confirmation on dangerous commands
+
+# Default interaction mode
+default_action = "interactive"               # Options: "interactive", "execute", "copy"
+
+# =============================================================================
+# Script Generation & Saving
+# =============================================================================
+
+[scripts]
+# Default directory for saved scripts
+save_directory = "~/intelliscript_scripts"   # Where to save generated scripts
+auto_execute_permission = true               # Automatically make scripts executable (Unix)
+include_header = true                        # Include header with metadata
+backup_existing = true                       # Backup existing files before overwriting
+
+# Default script template
+template = """#!/bin/bash
+# Generated by IntelliScript
+# Date: {timestamp}
+# Query: {query}
+# Explanation: {explanation}
+# Provider: {provider}
+
+{command}
+"""
+
+# =============================================================================  
+# Logging & Analytics (Optional)
+# =============================================================================
+
+[logging]
+enabled = false                              # Enable usage logging
+log_file = "~/.config/intelliscript/usage.log"
+log_level = "INFO"                          # DEBUG, INFO, WARNING, ERROR
+include_queries = false                     # Log user queries (privacy consideration)
+include_responses = false                   # Log AI responses (privacy consideration)
+
+# =============================================================================
+# Advanced Configuration
+# =============================================================================
+
+[advanced]
+# Request timeout in seconds
+timeout = 30
+
+# Retry configuration for failed requests
+max_retries = 3
+retry_delay = 1                             # Seconds between retries
+
+# Cache configuration (optional)
+enable_cache = false                        # Cache responses for repeated queries
+cache_ttl = 3600                           # Cache time-to-live in seconds
+
+# Development options
+debug_mode = false                          # Enable debug output
+verbose = false                            # Enable verbose logging
+
+# =============================================================================
+# Environment Variable Mappings
+# =============================================================================
+# The following environment variables will override config file settings:
+#
+# OPENAI_API_KEY          -> openai.api_key
+# ANTHROPIC_API_KEY       -> anthropic.api_key  
+# GOOGLE_API_KEY          -> google.api_key
+# INTELLISCRIPT_PROVIDER  -> default_provider
+# INTELLISCRIPT_MODEL     -> [provider].model
+# INTELLISCRIPT_TEMP      -> temperature
+# INTELLISCRIPT_DEBUG     -> advanced.debug_mode
+#
+# Example usage:
+# export OPENAI_API_KEY="sk-your-key-here"
+# export INTELLISCRIPT_PROVIDER="openai"
+# intelliscript "list all python files"
+# =============================================================================
